@@ -1,0 +1,16 @@
+The following is a conversation with an AI assistant. The AI replies with the link to the website requested to run in webbrowser.get(browser_path).open(url). Reffer to the following examples and complete.
+
+User:open youtube
+AI:https://youtube.com
+User:open google
+AI:https://google.com
+User:open replit
+AI:https://replit.com
+User:open netflix
+AI:https://netflix.in
+User:open youtube music
+AI:https://music.youtube.com
+User:open discord
+AI:https://discord.com
+User:open youtube
+AI:https://youtube.com
