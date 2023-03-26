@@ -9,6 +9,7 @@ from threading import Thread
 from dotenv import load_dotenv
 from tkinter import *
 from tkinter import ttk
+import threading
 
 browser = 'firefox'
 if browser == 'firefox':
@@ -23,13 +24,14 @@ except:
     openai.api_key = input("input api key:")
 
 
-def writechat(conv):
-    pr = open("chats/chat.txt", "a+")
-    pr.writelines(conv)
-    pr.close()
-    tr = open("chats/trashed.txt", "a+")
-    tr.writelines(conv)
-    tr.close()
+def writechat(*args):
+    if type(args) is tuple:
+        pr = open("chats/chat.txt", "a+")
+        pr.writelines("".join(args))
+        pr.close()
+        tr = open("chats/trashed.txt", "a+")
+        tr.writelines("".join(args))
+        tr.close()
 
 
 def readchat(file):
@@ -45,12 +47,16 @@ def readchat(file):
 def reply(reply):
     botmsg(reply)
     print(f"AI: {reply}")
-    writechat(f"\nAI: {reply}")
+    t1= threading.Thread(target=writechat,args=(f"\nAI: {reply}"))
     engine = pyttsx3.init('sapi5')
     voices = engine.getProperty('voices')
     engine.setProperty('voice', voices[0].id)
     engine.say(reply)
-    # engine.runAndWait()
+    t2= threading.Thread(target=engine.runAndWait)
+    t1.start()
+    t2.start()
+    #t1.join()
+    #t2.join()
 
 
 
@@ -82,7 +88,7 @@ def openurl(sweb):
     txt = open("chats/urls.txt", "a")
     txt.writelines(f"\nUser:open{sweb}\nAI:{url}")
     txt.close()
-    webbrowser.get(browser_path).open(url)
+    webbrowser.open(url)
 
 
 def processs(query):
@@ -110,7 +116,7 @@ def processs(query):
 
     elif 'play music' in query:
         reply(f'opening spotify in {browser}')
-        webbrowser.get(browser_path).open('open.spotify.com')
+        webbrowser.open('open.spotify.com')
         return f'opening spotify in {browser}'
 
     # elif 'open youtube' in query:
