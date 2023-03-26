@@ -115,7 +115,7 @@ def processs(query):
 
     elif 'play music' in query:
         reply(f'opening spotify in {browser}')
-        webbrowser.open('open.spotify.com')
+        webbrowser.open('https://open.spotify.com')
         return f'opening spotify in {browser}'
 
     # elif 'open youtube' in query:
