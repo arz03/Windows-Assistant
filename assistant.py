@@ -208,7 +208,7 @@ def botmsg(reply):
     response_widget.pack(side='top', pady=5, padx=10, fill='x', anchor='w')
     chat_area.window_create('end-1c linestart + 1line', window=response_widget)
     chat_area.config(state='disabled')
-
+    chat_area.see('end')
 
 # create a 'Send' button
 send_button = Button(frame, text='Send', command=usermsg, bg=button_color, fg=fg_color,
