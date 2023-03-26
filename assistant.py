@@ -4,9 +4,9 @@ import datetime
 import wikipedia  # pip install wikipedia
 import webbrowser
 import os
-import openai
+import openai #pip install openai
 from threading import Thread
-from dotenv import load_dotenv
+from dotenv import load_dotenv # pip install python-dotenv
 from tkinter import *
 from tkinter import ttk
 import threading
@@ -43,7 +43,7 @@ def readchat(file):
     pr.close()
     return str1
 
-
+# speak and append bot replies
 def reply(reply):
     botmsg(reply)
     print(f"AI: {reply}")
@@ -58,14 +58,13 @@ def reply(reply):
     #t1.join()
     #t2.join()
 
-
-
+# take inputs from console
 def takeCommand():
     query = input("User:")
     writechat(f"\nUser: {query}")
     return query
 
-
+# using openai api to process user inputs
 def openaii(prompt):
     response = openai.Completion.create(engine="text-davinci-003",
                                          prompt=prompt,
@@ -79,7 +78,7 @@ def openaii(prompt):
     output = output1.strip()
     return output
 
-
+# function to phrase urls and open in browser
 def openurl(sweb):
     reply(f"looking for{sweb}")
     prompt = readchat("chats/urls.txt")+f"\nUser:open{sweb}\n AI:"
@@ -90,7 +89,7 @@ def openurl(sweb):
     txt.close()
     webbrowser.open(url)
 
-
+# main function to process user inputs
 def processs(query):
     print(f"User:{query}")
     # Logic for executing tasks based on query
@@ -140,7 +139,7 @@ def processs(query):
         return gett
 
 
-
+# creating gui
 root = Tk()
 root.geometry('800x600')  # set initial window size
 
@@ -247,6 +246,7 @@ audio_button = Button(frame, text='Audio Input', command=audi, bg=button_color, 
                       highlightbackground=bg_color, highlightcolor=button_hover_color,
                       highlightthickness=1, relief='flat')
 audio_button.pack(side='left', padx=5)
+
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour>=0 and hour<12:
