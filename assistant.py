@@ -1,6 +1,7 @@
 import pyttsx3  # pip install pyttsx3
 import speech_recognition as sr  # pip install speechRecognition
 import datetime
+import time
 import wikipedia  # pip install wikipedia
 import webbrowser
 import os
@@ -11,7 +12,7 @@ from tkinter import *
 from tkinter import ttk
 import threading
 
-browser = 'firefox'
+browser = 'browser'
 if browser == 'firefox':
     browser_path = "C:\Program Files (x86)\Mozilla Firefox\\firefox.exe %s"
 else:
@@ -23,7 +24,6 @@ try:
 except:
     openai.api_key = input("input api key:")
 
-
 def writechat(*args):
     if type(args) is tuple:
         pr = open("chats/chat.txt", "a+")
@@ -32,7 +32,6 @@ def writechat(*args):
         tr = open("chats/trashed.txt", "a+")
         tr.writelines("".join(args))
         tr.close()
-
 
 def readchat(file):
     pr = open(file, "r")
@@ -58,24 +57,35 @@ def reply(reply):
     #t1.join()
     #t2.join()
 
-# take inputs from console
+# take inputs from console (unused now)
 def takeCommand():
     query = input("User:")
     writechat(f"\nUser: {query}")
     return query
 
-# using openai api to process user inputs
-def openaii(prompt):
-    response = openai.Completion.create(engine="text-davinci-003",
+# extract responses from openai api
+def openaii(prompt, chat = 'yes'):
+    print("openai prompt: "+prompt, "\nchat mode?:", chat)
+    if chat == 'yes':
+        response = openai.Completion.create(engine="text-davinci-003",
                                          prompt=prompt,
                                          temperature=0.5,
-                                         max_tokens=150,
+                                         max_tokens=256,
                                          top_p=1,
                                          frequency_penalty=0,
-                                         presence_penalty=0.6,
+                                         presence_penalty=0,
                                          stop=[" User:", " AI:"])
+    else:
+        response = openai.Completion.create(engine="text-davinci-003",
+                                         prompt=prompt,
+                                         temperature=0.5,
+                                         max_tokens=256,
+                                         top_p=1,
+                                         frequency_penalty=0,
+                                         presence_penalty=0)
     output1 = response['choices'][0]['text']
     output = output1.strip()
+    print ("\nopneai api output: "+output)
     return output
 
 # function to phrase urls and open in browser
@@ -133,11 +143,33 @@ def processs(query):
         openurl(query)
         return "processing..."
 
+    elif 'the time' in query:
+            strTime = datetime.datetime.now().strftime("%I:%M:%S %p")  
+            reply(f"the time is {strTime}")
+            return f"the time is {strTime}"
+    
+    elif "set alarm" in query or "remindme" in query or ('set' in query and 'alarm' in query):
+        promptcmd="Act as function that takes a string as input and returns a list in the format `['for', 'HH:MM', reason]`, where 'HH:MM' is in 24-hour format. The input string will contain a time in the format 'HH:MM' or 'HH:MM am or pm' ( may not be 24-hour format) and a reason for a task, separated by a space. The function should extract the time and reason from the input string and return them as a list with the format mentioned above. Here's an example input and output:\n\nExample Input: \"13:45 Meeting with the team\"\nExample Output: ['for', '13:45', 'Meeting with the team']\n\nNote that the output should always start with the string 'for', followed by the extracted time and reason.\n\nInput: \"set alarm for 7:55pm eat\"\nOutput:  ['for', '19:55', 'eat']"
+        apicmd = openaii(promptcmd+"\n\nInput: "+query+"\"\nOutput: ", 'no')
+        words = apicmd.strip('[]').replace("'", "").split(', ')
+        time_idx = words.index("for") + 1
+        alarm_time_str = words[time_idx]
+        alarm_time = time.strptime(alarm_time_str, "%H:%M")
+        current_time = time.localtime()
+        alarm_seconds = (alarm_time.tm_hour - current_time.tm_hour) * 3600 + \
+                        (alarm_time.tm_min - current_time.tm_min) * 60 - \
+                        current_time.tm_sec
+        reason = " ".join(words[words.index("for")+2:])
+        def alarm_callback():
+            reply("ALARM GOES OFF!!! Reason: {} ".format(reason))
+        timer = threading.Timer(alarm_seconds, alarm_callback)
+        timer.start()
+        reply("Alarm set for {}".format(alarm_time_str))
+
     else:
         gett= openaii("The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nUser: Hello, who are you?\nAI: I am your Windows Assistant created by Arjun Sarje. How can I help you today?\nHuman: "+query+"\nAI:")
         reply(gett)
         return gett
-
 
 # creating gui
 root = Tk()
@@ -261,4 +293,9 @@ def wishMe():
     reply("I am your Windows Assistant. Please let me know how may I help you")
 
 wishMe()
-root.mainloop()
+
+while True:
+    try:
+        root.mainloop()
+    except:
+        continue
