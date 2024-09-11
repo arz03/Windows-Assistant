@@ -47,6 +47,9 @@ def writechat(*args):
         tr = open("chats/trashed.txt", "a+")
         tr.writelines("".join(args))
         tr.close()
+        cr = open("chats/current.txt", "a+")
+        cr.writelines("".join(args))
+        cr.close()
 
 def readchat(file):
     pr = open(file, "r")
@@ -83,6 +86,7 @@ def takeCommand():
 
 # extract responses from openai api
 def openaii(prompt, chat = 'yes'):
+    print("-------------Generative AI FUNCTION----------------")
     print("Generative AI prompt: "+prompt, "\nchat mode?:", chat)
     # if chat == 'yes':
     #     response = openai.Completion.create(engine="text-davinci-003",
@@ -109,20 +113,23 @@ def openaii(prompt, chat = 'yes'):
     output = response.text.strip()
     if output.startswith("AI:"):
         output = output.replace("AI: ","")
-    print ("\Generative AI api output: "+output)
+    print ("Generative AI api output: "+output)
+    print("-------------Generative AI FUNCTION END----------------")
     return output
 
 # function to phrase urls and open in browser
 def openurl(sweb):
-    reply(f"looking for{sweb}")
+    print("-------------URL OPENER FUNCTION----------------")
+    reply(f"looking for {sweb}")
     prompt = readchat("chats/urls.txt")+f"\nUser:open{sweb}\n AI:"
-    url = openaii(prompt)
+    url = openaii(prompt, 'no')
     reply(f"opening {url} with {browser}")
     if learning:
         txt = open("chats/urls.txt", "a")
         txt.writelines(f"\nUser:open{sweb}\nAI:{url}")
         txt.close()
     webbrowser.open(url)
+    print("-------------URL OPENER FUNCTION END----------------")
 
 # main function to process user inputs
 def processs(query):
@@ -192,7 +199,19 @@ def processs(query):
         reply("Alarm set for {}".format(alarm_time_str))
 
     else:
-        gett= openaii("The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly.\n\nUser: Hello, who are you?\nAI: I am your Windows Assistant created by Arjun Sarje. How can I help you today?\nHuman: "+query+"\nAI:")
+        chattxt = readchat("chats/chat.txt")
+        currenttxtinp = readchat("chats/current.txt")
+        # add a method to clean up the current.txt file if it gets too large
+        if len(currenttxtinp) > 1000:
+            currfile = open("chats/current.txt", "w")
+            currfile.write("")
+            currfile.close()
+            currenttxt = ""
+        else:
+            currenttxt = currenttxtinp
+
+        fpormpt=chattxt+currenttxt+f"\nUser: {query}\nAI:"
+        gett= openaii(fpormpt, 'yes')
         reply(gett)
         return gett
 
@@ -256,6 +275,7 @@ def usermsg():
     chat_area.window_create('end', window=message_widget)
     chat_area.config(state='disabled')
     processs(message)
+    
     
 def botmsg(reply):
     chat_area.config(state='normal')

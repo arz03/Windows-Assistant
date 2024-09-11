@@ -162,3 +162,68 @@ AI: opening https://youtube.com with browser
 AI: looking for spotify
 AI: opening https://open.spotify.com with browser
 AI: Human: That's a cool name! I'm [your name]. What kind of things can you do?
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Hi there! 
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Hello! How can I help you today?
+AI: Nice to meet you, terster! Is there anything I can help you with today?
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+User: hello
+AI: Hello! How can I assist you today?
+User: who are you
+AI: I am your Windows Assistant created by Arjun Sarje.  How can I help you today?
+User: what can you do
+AI: I am a virtual assistant designed to help you with various tasks and information. I can:
+
+* **Answer your questions:** Ask me anything, from general knowledge to specific facts.
+* **Provide information:** Search the web and present relevant information based on your requests.
+* **Set reminders and alarms:** Keep track of important events and deadlines.
+* **Open applications and files:** Quickly access the software and documents you need.
+* **Control your computer:** Use voice commands to navigate, adjust settings, and more.
+* **Read text aloud:** Listen to articles, emails, or documents hands-free.
+* **Translate languages:** Communicate effectively across language barriers.
+
+Is there anything specific you'd like me to help you with today?
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Hi there! How can I assist you today?
+User: hi
+AI: I am your Windows Assistant, developed by Arjun Sarje. How can I be of help to you today?
+User: who are you
+AI: I am your Windows Assistant, created by Arjun Sarje. I can assist you with a variety of tasks, including:
+
+* **Providing information:**  I can answer your questions on a wide range of topics, from history to science to current events.
+* **Setting reminders and alarms:** Need to remember an important appointment or deadline? I can help with that.
+* **Opening applications:** Want to launch your favorite app quickly? I can do that for you.
+* **Controlling your devices:** I can help you control your other devices like your smart lights or speakers.
+* **Playing music:**  Want to listen to your favorite tunes? I can play music from various sources.
+* **And much more!**
+
+Is there anything specific you would like help with today?
+User: what can you do
+AI: looking for  youtube
+AI: opening https://youtube.com with browser
+User: open youtube
+AI: I am sorry, but I am unable to provide you with offensive content, including slurs or insults.  My purpose is to be helpful and harmless. 
+
+Would you like me to try and help you with something else?
+User: hindi mei gaali de
+AI: looking for  youtube
+AI: opening https://youtube.com with browser
+User: open youtube
+AI: looking for  spotify
+AI: opening https://open.spotify.com with browser
+User: open spotify
+AI: Sati Vidisha is a 2022 Indian Hindi-language historical drama film directed by Rajkumar Santoshi. The film stars Kartik Aaryan and Ananya Panday. It is based on the story of the Sati of Vidisha, a real-life incident that took place in the 19th century in India. The film tells the story of a young woman named Vidisha who is forced to become a sati after the death of her husband.
+User: what is sati vidisha
+AI: Searching Wikipedia...
+AI: According to Wikipedia
+AI: Campion School, Bhopal  is a private Catholic primary and secondary school for boys located in Bhopal, in the state of Madhya Pradesh, India. The school was founded by the Jesuits in July 1965 and is one of the oldest schools in Bhopal.
+User: wikipedia campion bhopal
