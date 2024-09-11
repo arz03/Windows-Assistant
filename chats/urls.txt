@@ -11,6 +11,10 @@ AI:https://netflix.in
 User:open youtube music
 AI:https://music.youtube.com
 User:open discord
-AI:https://discord.com
+AI:https://discord.com/app
 User:open youtube
 AI:https://youtube.com
+User:open spotify
+AI:https://open.spotify.com
+User: open replit
+AI: opening https://openreplit.com

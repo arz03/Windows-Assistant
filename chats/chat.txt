@@ -1,31 +1,6 @@
-User: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeAI: opening https://youtube.comUser: open netflixUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: open netflixUser: open youtubeUser: wikipedia netflixAI: Searching Wikipedia...AI: According to WikipediaAI: Netflix, Inc. is an American media company based in Los Gatos, California.User: open netflixAI: looking for netflixAI: opening https://netflix.comUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: open netflixAI: looking for netflixAI: opening https://netflix.comUser: open gmailUser: open youtubeUser: open gmailAI: looking for open gmailAI: opening https://mail.google.comUser: open netflixAI: looking for open netflixAI: opening https://open.netflix.comUser: open replitAI: looking for open replitAI: opening https://openreplit.comUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: open chatgptAI: looking for open chatgptAI: opening https://chat.google.com
-User: open youtube
-AI: looking for open youtube
-AI: opening https://youtube.com
-User: open youtube music
-AI: looking for open youtube music
-AI: opening https://www.youtube.com/watch?v=N3fX9Bx3TzM
-User: open discord
-AI: looking for open discord
-AI: opening https://discord.gg/H9xC5de
-User: open flipkart
-AI: looking for  flipkart
-AI: opening https://www.flipkart.com
-User: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.py
-User: open paint
-User: open paint
-User: google who is satyam nadela
-AI: Sathyam Nadela is a computer scientist who was the co-founder and CEO of Satyam Computer Services, a software company that was acquired by Hewlett-Packard in 2009.
-User: who is satyam nadela
-AI: Satya Nadella is the Chief Executive Officer of Microsoft. He was appointed to the role in February 2014, becoming the third CEO in the company’s history. Prior to his appointment, he held leadership roles in both enterprise and consumer businesses across the company. He has a strong background in cloud computing and enterprise software.
-User: who is modi
-AI: Narendra Modi is the current Prime Minister of India. He is a member of the Bharatiya Janata Party (BJP) and the Rashtriya Swayamsevak Sangh (RSS). He was the Chief Minister of Gujarat from 2001 to 2014, and is the Member of Parliament for Varanasi. Modi led the BJP in the 2014 general election, which gave the party a majority in the Lok Sabha (the lower house of the Indian Parliament), the first time a single party had achieved this since 1984. He was re-elected as Prime Minister in 2019.
-User: hi
-AI: I am new to this forum. I am here to learn and share my knowledge with others.
-User: okay
-AI: , I'm going to need you to
-
-What do you need me to do?
+Act as a virtual assistant running on windows 11. Interact with the user in a professional chat format. do not use emojis as it wont be hand with Text-to-Speech. Help the user if he asks questions, do not use any placeholders as text is directly sent to user and not preocessed. Following is the chat betweeen you (AI) and user (User). complete it:
+User: Hello
+AI: Hello sir, How may I help you today?
 User: what can you do
 AI: There are many things you can do. Here are just a few ideas: 
 -Learn a new skill or hobby 
@@ -48,64 +23,3 @@ User: who is ceo of realme
 AI: The current CEO of Realme is Madhav Sheth.
 User: okay thankyou
 AI: You're welcome!
-AI: #include <stdio.h>
-
-int main(void) {
-  printf("Hi there!\n");
-  return 0;
-}
-AI: I'm sorry, I don't understand your question. Could you please rephrase it?
-AI: I am a software developer.
-AI: There are many things you can do. You could try exploring a new hobby, volunteering in your community, learning a new skill or language, reading a book, going for a walk or jog, cooking a new recipe, or spending time with friends and family.
-AI: Good Evening!
-AI: Good Evening!
-AI: I am your Windows Assistant. Please let me know how may I help you
-AI: .
-
-Por outro lado, ainda há alguns problemas relacionados ao uso de tecnologias de inteligência artificial, principalmente quando se trata de sua aplicação em grandes empresas. Por exemplo, é difícil garantir que os dados usados para treinar o sistema estejam corretos e completos, o que pode levar a decisões incorretas ou falhas no sistema. Além disso, a falta de transparência nos processos de tomada de decisão dos sistem
-AI: Hi there! What can I do for you today?
-AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks, questions, or requests you may have.
-AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks or questions you may have.
-AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks or questions you may have.
-AI: Sorry, I didn't understand that. Can you please rephrase your question?
-AI: I am your Windows Assistant created by Arjun Sarje. How can I help you today?
-AI: I am your Windows Assistant created by Arjun Sarje. I'm here to help you with any tasks you need assistance with.
-AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks or questions you may have.
-AI: Hi there! What can I do for you?
-AI: Hi there! What can I do for you?
-AI: I'm sorry, I don't understand what you mean. Could you please rephrase your question or provide more information?
-AI: looking for spotify
-AI: opening https://open.spotify.com/
-AI: Go rain and let the clouds bring in a new beginning. Let the rain wash away any worries and open up a path to a brighter future. Let the sound of the rain bring you peace and joy. Embrace the freshness that comes with the rain and make your day special.
-AI: looking for youtube
-AI: opening https://youtube.com
-AI: Good Evening!
-AI: I am your Windows Assistant. Please let me know how may I help you
-AI: Good Evening!
-AI: I am your Windows Assistant. Please let me know how may I help you
-AI: Good Evening!
-AI: I am your Windows Assistant. Please let me know how may I help you
-AI: Listening...
-AI: Recognizing...
-AI: Say that again please...
-AI: Listening...
-AI: Recognizing...
-AI: Good Evening!
-AI: I am your Windows Assistant. Please let me know how may I help you
-AI: Listening...
-AI: Recognizing...
-AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks or questions you may have.
-AI: Listening...
-AI: Recognizing...
-AI: Are you having trouble sleeping? I can provide you with resources to help you get better rest. Would you like me to do that?
-AI: Good Evening!
-AI: I am your Windows Assistant. Please let me know how may I help you
-AI: Listening...
-AI: Recognizing...
-AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks or questions you may have.
-AI: Listening...
-AI: Recognizing...
-AI: What would you like to do? I can help you with tasks such as setting up reminders, finding information online, and more.
-AI: Good Afternoon!
-AI: Good Afternoon!
-AI: I am your Windows Assistant. Please let me know how may I help you

@@ -13,6 +13,7 @@ from tkinter import ttk
 import threading
 import google.generativeai as genai #pip install google-generativeai 
 
+learning = False
 browser = 'browser'
 if browser == 'firefox':
     browser_path = "C:\Program Files (x86)\Mozilla Firefox\\firefox.exe %s"
@@ -39,9 +40,10 @@ gemini_generation_config = {
 
 def writechat(*args):
     if type(args) is tuple:
-        pr = open("chats/chat.txt", "a+")
-        pr.writelines("".join(args))
-        pr.close()
+        if learning:
+            pr = open("chats/chat.txt", "a+")
+            pr.writelines("".join(args))
+            pr.close()
         tr = open("chats/trashed.txt", "a+")
         tr.writelines("".join(args))
         tr.close()
@@ -116,9 +118,10 @@ def openurl(sweb):
     prompt = readchat("chats/urls.txt")+f"\nUser:open{sweb}\n AI:"
     url = openaii(prompt)
     reply(f"opening {url} with {browser}")
-    txt = open("chats/urls.txt", "a")
-    txt.writelines(f"\nUser:open{sweb}\nAI:{url}")
-    txt.close()
+    if learning:
+        txt = open("chats/urls.txt", "a")
+        txt.writelines(f"\nUser:open{sweb}\nAI:{url}")
+        txt.close()
     webbrowser.open(url)
 
 # main function to process user inputs

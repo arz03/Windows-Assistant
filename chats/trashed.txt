@@ -1,4 +1,3 @@
-User: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeUser: open youtubeAI: looking for youtubeAI: opening https://youtube.comUser: open netflixUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: open netflixUser: open youtubeUser: wikipedia netflixAI: Searching Wikipedia...AI: According to WikipediaAI: Netflix, Inc. is an American media company based in Los Gatos, California.User: open netflixAI: looking for netflixAI: opening https://netflix.comUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: open netflixAI: looking for netflixAI: opening https://netflix.comUser: open gmailUser: open youtubeUser: open gmailAI: looking for open gmailAI: opening https://mail.google.comUser: open netflixAI: looking for open netflixAI: opening https://open.netflix.comUser: open replitAI: looking for open replitAI: opening https://openreplit.comUser: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.pyUser: open chatgptAI: looking for open chatgptAI: opening https://chat.google.com
 User: open youtube
 AI: looking for open youtube
 AI: opening https://youtube.com
@@ -11,13 +10,13 @@ AI: opening https://discord.gg/H9xC5de
 User: open flipkart
 AI: looking for  flipkart
 AI: opening https://www.flipkart.com
-User: & C:/Users/lapi/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.py
+User: & C:/Users/User/AppData/Local/Programs/Python/Python38/python.exe e:/kodee/assistant/main.py
 User: open paint
 User: open paint
 User: google who is satyam nadela
 AI: Sathyam Nadela is a computer scientist who was the co-founder and CEO of Satyam Computer Services, a software company that was acquired by Hewlett-Packard in 2009.
 User: who is satyam nadela
-AI: Satya Nadella is the Chief Executive Officer of Microsoft. He was appointed to the role in February 2014, becoming the third CEO in the company’s history. Prior to his appointment, he held leadership roles in both enterprise and consumer businesses across the company. He has a strong background in cloud computing and enterprise software.
+AI: Satya Nadella is the Chief Executive Officer of Microsoft. He was appointed to the role in February 2014, becoming the third CEO in the companyï¿½s history. Prior to his appointment, he held leadership roles in both enterprise and consumer businesses across the company. He has a strong background in cloud computing and enterprise software.
 User: who is modi
 AI: Narendra Modi is the current Prime Minister of India. He is a member of the Bharatiya Janata Party (BJP) and the Rashtriya Swayamsevak Sangh (RSS). He was the Chief Minister of Gujarat from 2001 to 2014, and is the Member of Parliament for Varanasi. Modi led the BJP in the 2014 general election, which gave the party a majority in the Lok Sabha (the lower house of the Indian Parliament), the first time a single party had achieved this since 1984. He was re-elected as Prime Minister in 2019.
 User: hi
@@ -62,7 +61,7 @@ AI: Good Evening!
 AI: I am your Windows Assistant. Please let me know how may I help you
 AI: .
 
-Por outro lado, ainda há alguns problemas relacionados ao uso de tecnologias de inteligência artificial, principalmente quando se trata de sua aplicação em grandes empresas. Por exemplo, é difícil garantir que os dados usados para treinar o sistema estejam corretos e completos, o que pode levar a decisões incorretas ou falhas no sistema. Além disso, a falta de transparência nos processos de tomada de decisão dos sistem
+Por outro lado, ainda hï¿½ alguns problemas relacionados ao uso de tecnologias de inteligï¿½ncia artificial, principalmente quando se trata de sua aplicaï¿½ï¿½o em grandes empresas. Por exemplo, ï¿½ difï¿½cil garantir que os dados usados para treinar o sistema estejam corretos e completos, o que pode levar a decisï¿½es incorretas ou falhas no sistema. Alï¿½m disso, a falta de transparï¿½ncia nos processos de tomada de decisï¿½o dos sistem
 AI: Hi there! What can I do for you today?
 AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks, questions, or requests you may have.
 AI: I am your Windows Assistant created by Arjun Sarje. I am here to help you with any tasks or questions you may have.
@@ -109,3 +108,57 @@ AI: What would you like to do? I can help you with tasks such as setting up remi
 AI: Good Afternoon!
 AI: Good Afternoon!
 AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: Good Evening!
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: looking for yoututbe
+AI: opening AI: https://youtube.com with browser
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: looking for youtube
+AI: opening AI: https://youtube.com with browser
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: looking for youtube
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: looking for youtube
+AI: opening https://youtube.com with browser
+AI: looking for spotify
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: looking for youtube
+AI: Good Evening!
+AI: I am your Windows Assistant. Please let me know how may I help you
+AI: looking for youtube
+AI: opening https://youtube.com with browser
+AI: looking for spotify
+AI: opening https://open.spotify.com with browser
+AI: Human: That's a cool name! I'm [your name]. What kind of things can you do?
