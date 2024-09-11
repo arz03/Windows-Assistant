@@ -5,12 +5,13 @@ import time
 import wikipedia  # pip install wikipedia
 import webbrowser
 import os
-import openai #pip install openai
+#import openai #pip install openai
 from threading import Thread
 from dotenv import load_dotenv # pip install python-dotenv
 from tkinter import *
 from tkinter import ttk
 import threading
+import google.generativeai as genai #pip install google-generativeai 
 
 browser = 'browser'
 if browser == 'firefox':
@@ -18,11 +19,23 @@ if browser == 'firefox':
 else:
     browser_path = "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s"
 
+# load_dotenv()
+# try:
+#     openai.api_key = os.getenv("keyy")
+# except:
+#     openai.api_key = input("input api key:")
 load_dotenv()
 try:
-    openai.api_key = os.getenv("keyy")
+    genai.configure(api_key=os.getenv("gemini_api"))
 except:
-    openai.api_key = input("input api key:")
+    genai.configure(api_key=input("Input API key:"))
+gemini_generation_config = {
+    "temperature": 1,
+    "top_p": 0.95,
+    "top_k": 64,
+    "max_output_tokens": 8192,
+    "response_mime_type": "text/plain",
+}
 
 def writechat(*args):
     if type(args) is tuple:
@@ -46,14 +59,17 @@ def readchat(file):
 def reply(reply):
     botmsg(reply)
     print(f"AI: {reply}")
-    t1= threading.Thread(target=writechat,args=(f"\nAI: {reply}"))
-    engine = pyttsx3.init('sapi5')
-    voices = engine.getProperty('voices')
-    engine.setProperty('voice', voices[0].id)
-    engine.say(reply)
-    t2= threading.Thread(target=engine.runAndWait)
-    t1.start()
-    t2.start()
+    try:
+        t1= threading.Thread(target=writechat,args=(f"\nAI: {reply}"))
+        engine = pyttsx3.init('sapi5')
+        voices = engine.getProperty('voices')
+        engine.setProperty('voice', voices[0].id)
+        engine.say(reply)
+        t2= threading.Thread(target=engine.runAndWait)
+        t1.start()
+        t2.start()
+    except:
+        pass
     #t1.join()
     #t2.join()
 
@@ -65,27 +81,33 @@ def takeCommand():
 
 # extract responses from openai api
 def openaii(prompt, chat = 'yes'):
-    print("openai prompt: "+prompt, "\nchat mode?:", chat)
-    if chat == 'yes':
-        response = openai.Completion.create(engine="text-davinci-003",
-                                         prompt=prompt,
-                                         temperature=0.5,
-                                         max_tokens=256,
-                                         top_p=1,
-                                         frequency_penalty=0,
-                                         presence_penalty=0,
-                                         stop=[" User:", " AI:"])
-    else:
-        response = openai.Completion.create(engine="text-davinci-003",
-                                         prompt=prompt,
-                                         temperature=0.5,
-                                         max_tokens=256,
-                                         top_p=1,
-                                         frequency_penalty=0,
-                                         presence_penalty=0)
-    output1 = response['choices'][0]['text']
-    output = output1.strip()
-    print ("\nopneai api output: "+output)
+    print("Generative AI prompt: "+prompt, "\nchat mode?:", chat)
+    # if chat == 'yes':
+    #     response = openai.Completion.create(engine="text-davinci-003",
+    #                                      prompt=prompt,
+    #                                      temperature=0.5,
+    #                                      max_tokens=256,
+    #                                      top_p=1,
+    #                                      frequency_penalty=0,
+    #                                      presence_penalty=0,
+    #                                      stop=[" User:", " AI:"])
+    # else:
+    #     response = openai.Completion.create(engine="text-davinci-003",
+    #                                      prompt=prompt,
+    #                                      temperature=0.5,
+    #                                      max_tokens=256,
+    #                                      top_p=1,
+    #                                      frequency_penalty=0,
+    #                                      presence_penalty=0)
+    # output1 = response['choices'][0]['text']
+    # output = output1.strip()
+    model = genai.GenerativeModel(model_name="gemini-1.5-flash", generation_config=gemini_generation_config)
+    chat_session = model.start_chat(history=[])
+    response = chat_session.send_message(prompt)
+    output = response.text.strip()
+    if output.startswith("AI:"):
+        output = output.replace("AI: ","")
+    print ("\Generative AI api output: "+output)
     return output
 
 # function to phrase urls and open in browser
@@ -281,16 +303,19 @@ audio_button.pack(side='left', padx=5)
 
 def wishMe():
     hour = int(datetime.datetime.now().hour)
-    if hour>=0 and hour<12:
-        reply("Good Morning!")
+    try:
+        if hour>=0 and hour<12:
+            reply("Good Morning!")
 
-    elif hour>=12 and hour<18:
-        reply("Good Afternoon!")   
+        elif hour>=12 and hour<18:
+            reply("Good Afternoon!")   
 
-    else:
-        reply("Good Evening!")  
+        else:
+            reply("Good Evening!")  
 
-    reply("I am your Windows Assistant. Please let me know how may I help you")
+        reply("I am your Windows Assistant. Please let me know how may I help you")
+    except:
+        pass
 
 wishMe()
 
