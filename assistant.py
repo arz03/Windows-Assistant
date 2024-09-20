@@ -275,6 +275,7 @@ def usermsg():
     chat_area.window_create('end', window=message_widget)
     chat_area.config(state='disabled')
     processs(message)
+    writechat(f"\nUser: {message}")
     
     
 def botmsg(reply):
@@ -327,7 +328,7 @@ audio_button.pack(side='left', padx=5)
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     try:
-        if hour>=0 and hour<12:
+        if hour>=3 and hour<12:
             reply("Good Morning!")
 
         elif hour>=12 and hour<18:
